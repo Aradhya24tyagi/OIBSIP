@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Register</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Floating background icons -->
+  <div class="floating-bg">
+    <div class="icon" style="left:10%; animation-duration: 12s;">🍕</div>
+    <div class="icon" style="left:25%; animation-duration: 15s;">🥤</div>
+    <div class="icon" style="left:40%; animation-duration: 18s;">🍩</div>
+    <div class="icon" style="left:55%; animation-duration: 20s;">🍔</div>
+    <div class="icon" style="left:70%; animation-duration: 14s;">🍟</div>
+    <div class="icon" style="left:85%; animation-duration: 16s;">🌮</div>
+  </div>
+
+  <div class="container">
+    <h2>📝 Register</h2>
+    <input type="text" id="regUsername" placeholder="Username">
+    <input type="password" id="regPassword" placeholder="Password">
+    <button id="registerBtn">Register</button>
+    <p id="regError" class="error"></p>
+    <p>Already have an account? <a href="index.html">Login here</a></p>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    document.getElementById("registerBtn").addEventListener("click", () => {
+      let username = document.getElementById("regUsername").value;
+      let password = document.getElementById("regPassword").value;
+      if(username && password){
+        if (registerUser(username, password)) {
+          alert("Registration successful! Please login.");
+          window.location.href = "index.html";
+        } else {
+          document.getElementById("regError").textContent = "Username already exists!";
+        }
+      } else {
+        document.getElementById("regError").textContent = "All fields are required!";
+      }
+    });
+  </script>
+</body>
+</html>

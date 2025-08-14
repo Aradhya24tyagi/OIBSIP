@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Secure Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body onload="checkAuth()">
+  <!-- Floating background icons -->
+  <div class="floating-bg">
+    <div class="icon" style="left:10%; animation-duration: 12s;">🍕</div>
+    <div class="icon" style="left:25%; animation-duration: 15s;">🥤</div>
+    <div class="icon" style="left:40%; animation-duration: 18s;">🍩</div>
+    <div class="icon" style="left:55%; animation-duration: 20s;">🍔</div>
+    <div class="icon" style="left:70%; animation-duration: 14s;">🍟</div>
+    <div class="icon" style="left:85%; animation-duration: 16s;">🌮</div>
+  </div>
+
+  <div class="container">
+    <h2 class="typewriter" id="welcome"></h2>
+    <p>This is a protected page. Only logged-in users can see this.</p>
+    <button onclick="logout()">Logout</button>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    const username = localStorage.getItem("loggedInUser");
+    document.getElementById("welcome").textContent = `Welcome, ${username}!`;
+  </script>
+</body>
+</html>

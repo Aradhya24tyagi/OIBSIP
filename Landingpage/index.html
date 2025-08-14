@@ -1,0 +1,230 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BlueNova Web</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #f0f8ff;
+      color: #1a1a1a;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background-color: #0b3d91;
+      color: white;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: #ffffff;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #4fc3f7;
+    }
+
+    section {
+      padding: 50px 20px;
+    }
+
+    .hero {
+      text-align: center;
+      background: linear-gradient(to right, #4fc3f7, #0b3d91);
+      color: white;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .hero h1 {
+      font-size: 42px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
+    h2.section-title {
+      text-align: center;
+      font-size: 32px;
+      color: #0b3d91;
+      margin-bottom: 30px;
+    }
+
+    .features, .services, .about, .layout, .contact {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .feature, .service, .about-section, .layout-section, .contact-section {
+      background: #ffffff;
+      border-radius: 10px;
+      padding: 25px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    footer {
+      background-color: #0b3d91;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav a {
+        margin: 10px 0;
+      }
+    }
+  </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelector("a[href='#hero']").addEventListener("click", (e) => {
+        e.preventDefault();
+        document.getElementById("hero").scrollIntoView({ behavior: "auto", block: "start" });
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <header>
+    <h1>BlueNova Web</h1>
+    <nav>
+      <a href="#hero">Home</a>
+      <a href="#features">Features</a>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#layout">Layout</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="hero" class="hero">
+    <h1>Welcome to the Dashboard</h1>
+    <p>Overview of all features, services, and more in one place.</p>
+  </section>
+
+  <section id="features">
+    <h2 class="section-title">Features</h2>
+    <div class="features">
+      <div class="feature">
+        <h3>Custom Layouts</h3>
+        <p>Design dynamic and flexible layouts to match every screen and device.</p>
+      </div>
+      <div class="feature">
+        <h3>Responsive Design</h3>
+        <p>Your site will look amazing on phones, tablets, and desktops alike.</p>
+      </div>
+      <div class="feature">
+        <h3>Clean Styling</h3>
+        <p>Maintain a sleek and professional look using modern CSS techniques.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <h2 class="section-title">Our Services</h2>
+    <div class="services">
+      <div class="service">
+        <h3>Consultation</h3>
+        <p>Expert advice to boost your web journey and product vision.</p>
+      </div>
+      <div class="service">
+        <h3>Web Development</h3>
+        <p>Professional-grade websites tailored to your audience and goals.</p>
+      </div>
+      <div class="service">
+        <h3>UI/UX Design</h3>
+        <p>Attractive and intuitive designs that convert visitors into clients.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2 class="section-title">About Us</h2>
+    <div class="about">
+      <div class="about-section">
+        <h3>Who We Are</h3>
+        <p>BlueNova is a team of passionate developers driven by innovation and design.</p>
+      </div>
+      <div class="about-section">
+        <h3>Our Values</h3>
+        <p>We believe in clean code, user-centric design, and continuous learning.</p>
+      </div>
+      <div class="about-section">
+        <h3>Community First</h3>
+        <p>We contribute to the dev community through tutorials, templates, and support.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="layout">
+    <h2 class="section-title">Layout & Structure</h2>
+    <div class="layout">
+      <div class="layout-section">
+        <h3>Flexible Grids</h3>
+        <p>Use CSS Grid and Flexbox to create responsive, adaptable structures.</p>
+      </div>
+      <div class="layout-section">
+        <h3>Spacing Strategy</h3>
+        <p>Enhance readability with smart padding, margins, and white space.</p>
+      </div>
+      <div class="layout-section">
+        <h3>Component Reusability</h3>
+        <p>Build modular sections that scale and adapt to any project.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2 class="section-title">Contact Us</h2>
+    <div class="contact">
+      <div class="contact-section">
+        <h3>Email</h3>
+        <p>Drop us a line at: hello@bluenova.dev</p>
+      </div>
+      <div class="contact-section">
+        <h3>Office</h3>
+        <p>456 Tech Avenue, Cloud City, Webland</p>
+      </div>
+      <div class="contact-section">
+        <h3>Connect</h3>
+        <p>Follow us on LinkedIn, GitHub, and Twitter for updates.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 BlueNova Web. Built with care for creators worldwide.</p>
+  </footer>
+</body>
+</html> -->

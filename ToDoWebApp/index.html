@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Tasks - To-Do App</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Daily Tasks ✨</h1>
+            <p>Stay organized, stay productive!</p>
+        </header>
+
+        <div class="add-task-section">
+            <div class="input-group">
+                <input type="text" id="taskInput" placeholder="What needs to be done?" maxlength="200">
+                <button id="addBtn">Add Task</button>
+            </div>
+        </div>
+
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="all">All Tasks</button>
+            <button class="tab-btn" data-tab="pending">Pending</button>
+            <button class="tab-btn" data-tab="completed">Completed</button>
+        </div>
+
+        <div class="task-sections">
+            <div id="all-tasks" class="task-section active">
+                <div class="task-list" id="allTasksList"></div>
+            </div>
+            
+            <div id="pending-tasks" class="task-section">
+                <div class="task-list" id="pendingTasksList"></div>
+            </div>
+            
+            <div id="completed-tasks" class="task-section">
+                <div class="task-list" id="completedTasksList"></div>
+            </div>
+        </div>
+
+        <div class="stats">
+            <span id="totalTasks">0</span> total tasks • 
+            <span id="pendingCount">0</span> pending • 
+            <span id="completedCount">0</span> completed
+        </div>
+    </div>
+
+    <!-- Edit Modal -->
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <h3>Edit Task</h3>
+            <input type="text" id="editInput" maxlength="200">
+            <div class="modal-actions">
+                <button id="saveEdit">Save</button>
+                <button id="cancelEdit">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

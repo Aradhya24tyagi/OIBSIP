@@ -1,0 +1,173 @@
+
+    :root {
+      --bg-color: #121212;
+      --text-color: #f0f0f0;
+      --accent: #00bcd4;
+      --card-bg: #1e1e1e;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: var(--bg-color);
+      color: var(--text-color);
+    }
+
+    nav {
+      background: #1a1a1a;
+      display: flex;
+      justify-content: right;
+      align-items: center;
+      gap: 70px;
+      padding: 40px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 5px rgba(0, 255, 255, 0.1);
+      height: 60px;
+    }
+
+    nav a {
+      color: var(--text-color);
+      text-decoration: none;
+      font-weight: bold;
+      position: relative;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      left: 0;
+      bottom: -5px;
+      background: var(--accent);
+      transition: 0.3s;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      padding: 60px 20px;
+      background: #181818;
+      height: 90vh;
+      overflow: hidden;
+    }
+
+    .profile-pic {
+      flex: 1;
+      max-width: 180px;
+      padding-right: 70px;
+    }
+
+    .profile-pic img {
+      width: 100%;
+      border-radius: 50%;
+      border: 3px solid var(--accent);
+      box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+    }
+
+    .intro {
+      flex: 2;
+      max-width: 600px;
+    }
+
+    .intro h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      color: var(--accent);
+    }
+
+    .intro p {
+      line-height: 1.6;
+      font-size: 1.1rem;
+    }
+
+    .resume-btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: var(--accent);
+      color: #000;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .resume-btn:hover {
+      background-color: #00acc1;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+      animation: fadeInUp 1.5s ease;
+    }
+
+#about p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 2rem;
+      color: var(--accent);
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: var(--card-bg);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0, 255, 255, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 25px rgba(0, 255, 255, 0.3);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #1a1a1a;
+      color: #aaa;
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      .intro h1 {
+        font-size: 2rem;
+      }
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+    }

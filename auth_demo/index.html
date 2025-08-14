@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Floating background icons -->
+  <div class="floating-bg">
+    <div class="icon" style="left:10%; animation-duration: 12s;">🍕</div>
+    <div class="icon" style="left:25%; animation-duration: 15s;">🥤</div>
+    <div class="icon" style="left:40%; animation-duration: 18s;">🍩</div>
+    <div class="icon" style="left:55%; animation-duration: 20s;">🍔</div>
+    <div class="icon" style="left:70%; animation-duration: 14s;">🍟</div>
+    <div class="icon" style="left:85%; animation-duration: 16s;">🌮</div>
+  </div>
+
+  <div class="container">
+    <h2>🔑 Login</h2>
+    <input type="text" id="loginUsername" placeholder="Username">
+    <input type="password" id="loginPassword" placeholder="Password">
+    <button id="loginBtn">Login</button>
+    <p id="loginError" class="error"></p>
+    <p>New user? <a href="register.html">Register here</a></p>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    document.getElementById("loginBtn").addEventListener("click", () => {
+      let usernameField = document.getElementById("loginUsername");
+      let passwordField = document.getElementById("loginPassword");
+      let username = usernameField.value;
+      let password = passwordField.value;
+      
+      if (loginUser(username, password)) {
+        window.location.href = "secure.html";
+      } else {
+        document.getElementById("loginError").textContent = "Invalid credentials!";
+        usernameField.classList.add("shake");
+        passwordField.classList.add("shake");
+        setTimeout(() => {
+          usernameField.classList.remove("shake");
+          passwordField.classList.remove("shake");
+        }, 300);
+      }
+    });
+  </script>
+</body>
+</html>

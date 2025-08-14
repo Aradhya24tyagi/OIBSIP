@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BlueNova Web</title>
+  <style>
+    :root{
+      --brand:#0b3d91;
+      --brand2:#4fc3f7;
+      --bg:#f0f8ff;
+      --card:#ffffff;
+      --text:#1a1a1a;
+      --muted:#2956b2;
+      --header-h:72px;
+    }
+
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;background-color:var(--bg);color:var(--text);scroll-behavior:smooth}
+
+    header{background-color:var(--brand);color:#fff;padding:16px 24px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:1000;height:var(--header-h)}
+    header h1{font-size:20px;letter-spacing:.3px}
+
+    nav a{color:#fff;margin-left:16px;text-decoration:none;font-weight:600;opacity:.95;transition:opacity .2s ease}
+    nav a:hover{opacity:1}
+
+    section{padding:56px 20px;scroll-margin-top:calc(var(--header-h) + 12px)}
+    .wrap{max-width:1100px;margin:0 auto}
+
+    .hero{display:flex;min-height:calc(100vh - var(--header-h));align-items:center;justify-content:center;text-align:center;background:linear-gradient(90deg,var(--brand2),var(--brand));color:#fff}
+    .hero h1{font-size:40px;margin-bottom:8px}
+    .hero p{font-size:18px;opacity:.95}
+
+    h2.section-title{text-align:center;font-size:32px;color:var(--muted);margin:0 0 14px}
+    p.section-lead{text-align:center;margin:0 auto 28px;max-width:720px;opacity:.85}
+
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+    .card{background:var(--card);border-radius:12px;padding:20px;box-shadow:0 6px 18px rgba(0,0,0,.06);text-align:left}
+    .card h3{font-size:18px;margin-bottom:6px;color:var(--brand)}
+    .card p{font-size:14px;line-height:1.6;opacity:.9}
+
+    footer{background-color:var(--brand);color:#fff;padding:18px;text-align:center}
+
+    .contact-grid{display:grid;grid-template-columns:2fr 1fr;gap:18px}
+    .contact-grid form{background:var(--card);border-radius:12px;padding:20px;box-shadow:0 6px 18px rgba(0,0,0,.06)}
+    .f-row{display:flex;gap:12px}
+    .f-row .field{flex:1}
+    label{font-size:13px;font-weight:600;display:block;margin:10px 0 6px;color:var(--muted)}
+    input,textarea{width:100%;padding:10px 12px;border:1px solid #d9e6ff;border-radius:8px;font-size:14px;outline:none}
+    textarea{min-height:120px;resize:vertical}
+    .btn{display:inline-block;border:none;background:var(--brand);color:#fff;padding:10px 16px;border-radius:8px;font-weight:700;margin-top:10px;cursor:pointer}
+
+    @media (max-width:900px){.contact-grid{grid-template-columns:1fr}}
+    @media (max-width:768px){header{flex-direction:column;align-items:flex-start;height:auto}:root{--header-h:96px}nav{margin-top:8px}nav a{display:inline-block;margin:6px 10px 0 0}}
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded',()=>{
+      const home = document.querySelector("a[href='#hero']");
+      if(home){
+        home.addEventListener('click',(e)=>{
+          e.preventDefault();
+          document.getElementById('hero').scrollIntoView({behavior:'auto',block:'start'});
+        });
+      }
+    });
+  </script>
+</head>
+<body>
+  <header>
+    <h1>BlueNova Web</h1>
+    <nav>
+      <a href="#hero">Home</a>
+      <a href="#features">Features</a>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#layout">Layout</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="hero" class="hero">
+    <div class="wrap">
+      <h1>Welcome to the Dashboard</h1>
+      <p>Overview of features, services, team, structure and ways to connect — all in one place.</p>
+    </div>
+  </section>
+
+  <section id="features">
+    <div class="wrap">
+      <h2 class="section-title">Features</h2>
+      <p class="section-lead">Explore the capabilities included out of the box. Click any card to extend it later.</p>
+      <div class="grid">
+        <div class="card"><h3>Live Editing</h3><p>Edit content on the go with real-time previews.</p></div>
+        <div class="card"><h3>Dark Mode</h3><p>Switch between light and dark themes seamlessly.</p></div>
+        <div class="card"><h3>API Ready</h3><p>Built to integrate easily with RESTful and GraphQL APIs.</p></div>
+        <div class="card"><h3>Security Features</h3><p>Stay safe with HTTPS, CSP headers, and input validation.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="wrap">
+      <h2 class="section-title">Our Services</h2>
+      <p class="section-lead">From discovery calls to deployment, we support your product journey end‑to‑end.</p>
+      <div class="grid">
+        <div class="card"><h3>Maintenance</h3><p>Keep everything running smoothly after launch.</p></div>
+        <div class="card"><h3>Analytics Setup</h3><p>Track and optimize your performance with insights.</p></div>
+        <div class="card"><h3>CMS Integration</h3><p>We work with WordPress, Sanity, Strapi and more.</p></div>
+        <div class="card"><h3>Performance Audits</h3><p>Improve Lighthouse scores and TTFB with ease.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap">
+      <h2 class="section-title">About Us</h2>
+      <p class="section-lead">We build with care and clarity, focusing on developer experience and user delight.</p>
+      <div class="grid">
+        <div class="card"><h3>Leadership</h3><p>Backed by industry veterans with a decade of expertise.</p></div>
+        <div class="card"><h3>Remote Culture</h3><p>Work from anywhere with async collaboration tools.</p></div>
+        <div class="card"><h3>Learning Focused</h3><p>We support open learning, courses, and mentorship.</p></div>
+        <div class="card"><h3>Sustainability</h3><p>Eco-conscious operations and green hosting choices.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="layout">
+    <div class="wrap">
+      <h2 class="section-title">Layout & Structure</h2>
+      <p class="section-lead">A quick look at how sections, columns, and spacing are organized.</p>
+      <div class="grid">
+        <div class="card"><h3>Mobile First</h3><p>Designed from smallest screens upward for agility.</p></div>
+        <div class="card"><h3>Breakpoints</h3><p>Custom media queries ensure smart responsiveness.</p></div>
+        <div class="card"><h3>Stacking Order</h3><p>Visual depth using z-index and layers.</p></div>
+        <div class="card"><h3>Containers</h3><p>Wrap sections cleanly for clear visual flow.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <h2 class="section-title">Contact Us</h2>
+      <p class="section-lead">Have a question or a project in mind? Send a message and we’ll get back soon.</p>
+      <div class="contact-grid">
+        <form onsubmit="event.preventDefault(); alert('Thanks! This is a demo.');">
+          <div class="f-row">
+            <div class="field">
+              <label for="name">Name</label>
+              <input id="name" type="text" placeholder="Your name" required>
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" type="email" placeholder="name@example.com" required>
+            </div>
+          </div>
+          <label for="msg">Message</label>
+          <textarea id="msg" placeholder="Tell us a bit about your project..."></textarea>
+          <button class="btn" type="submit">Send Message</button>
+        </form>
+        <div class="grid">
+          <div class="card"><h3>Email</h3><p>hello@bluenova.dev</p></div>
+          <div class="card"><h3>Office</h3><p>456 Tech Avenue, Cloud City, Webland</p></div>
+          <div class="card"><h3>Socials</h3><p>LinkedIn · GitHub · Twitter</p></div>
+          <div class="card"><h3>Availability</h3><p>Monday–Friday, 9am–6pm IST</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 BlueNova Web. Built with care for creators worldwide.</p>
+  </footer>
+</body>
+</html>

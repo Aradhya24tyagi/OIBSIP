@@ -1,54 +1,42 @@
 # OIBSIP - Web Development Internship
 
-This repository contains all the tasks I completed during my **Web Development Internship** at [Oasis Infobyte](https://oasisinfobyte.com/) as part of the **OIBSIP** program.  
-The internship was designed with multiple levels, each containing specific projects to enhance practical web development skills.
+## 🎯 Objective
+This repository documents the work completed during my **Web Development Internship** at **Oasis Infobyte (OIBSIP)**.  
+The goal of the internship was to strengthen my understanding of **HTML, CSS, and JavaScript** by building practical, real-world projects across multiple levels of complexity.
 
 ---
 
-## 📌 Internship Overview
-- **Domain:** Web Development
-- **Organization:** Oasis Infobyte
-- **Type:** Remote Internship
-- **Focus Areas:** HTML, CSS, JavaScript, and basic MERN concepts
-- **Structure:** Multi-level tasks from beginner to intermediate complexity
+## 📝 Steps Performed
+1. Understood internship task requirements and project guidelines provided by Oasis Infobyte.
+2. Divided work into levels as per the internship structure.
+3. Designed and developed the following projects:
+   - **Calculator** – A basic calculator for arithmetic operations.
+   - **Landing Page** – A responsive and visually appealing web landing page.
+   - **Temperature Converter** – Converts temperature between Celsius, Fahrenheit, and Kelvin.
+   - **To-Do Web App** – Task management app for adding, marking, and deleting tasks.
+   - **Auth Demo** – Demonstration of login and signup functionality.
+   - **Portfolio** – A personal portfolio website to showcase skills and projects.
+   - **Tribute Page** – A page dedicated to a chosen personality/topic.
+4. Tested each project for responsiveness and browser compatibility.
+5. Organized the completed work into this GitHub repository.
 
 ---
 
-## 📂 Projects Completed
-
-### 1. **Calculator**
-A simple, responsive calculator application built using HTML, CSS, and JavaScript to perform basic arithmetic operations.
-
-### 2. **Landing Page**
-A visually appealing and responsive landing page demonstrating modern web design principles, layout structuring, and styling.
-
-### 3. **Temperature Converter**
-A tool that converts temperatures between Celsius, Fahrenheit, and Kelvin, with a responsive and user-friendly interface.
-
-### 4. **To-Do Web App**
-A basic task management web application where users can add, mark, and delete tasks. Built using HTML, CSS, and JavaScript.
-
-### 5. **Auth Demo**
-A basic authentication demonstration using HTML, CSS, JavaScript (and possibly backend simulation) to understand login and signup functionalities.
-
-### 6. **Portfolio**
-A personal portfolio website to showcase projects, skills, and achievements with a clean and professional layout.
-
-### 7. **Tribute Page**
-A simple web page dedicated to a personality/topic of choice, applying semantic HTML structure and creative styling.
+## 🛠 Tools & Technologies Used
+- **Languages:** HTML5, CSS3, JavaScript (ES6)
+- **Design:** CSS Flexbox, CSS Grid, Media Queries
+- **Version Control:** Git & GitHub
+- *(Optional: Node.js / Express.js if used in Auth Demo)*
 
 ---
 
-## 🛠️ Technologies Used
-- HTML5
-- CSS3
-- JavaScript (ES6)
-- [Optional: Node.js / Express (if used in auth_demo)]
-- Responsive Design (Media Queries & Flexbox/Grid)
+## 📌 Outcome
+- Successfully completed all assigned tasks for the Web Development Internship.
+- Gained practical experience in **frontend web development**.
+- Improved skills in **responsive design, code structuring, and UI/UX principles**.
+- Created a portfolio of projects to showcase technical abilities.
 
 ---
 
-## 🚀 How to Run the Projects
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/<your-username>/OIBSIP.git
+**📅 Internship Duration:** 15 July 2025 – 15 August 2025  
+**Organization:** [Oasis Infobyte](https://oasisinfobyte.com/)
